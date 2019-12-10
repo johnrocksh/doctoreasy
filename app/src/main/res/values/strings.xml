@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">DoctoEasy</string>
+    <string name="button_login">LOG IN</string>
+    <string name="button_sign_up">SIGN UP</string>
+    <string name="email_addres">EMAIL ADDRES</string>
+    <string name="password">PASSWORD</string>
+    <string name="login_edit_text_password">Password</string>
+    <string name="login_edit_text_email">E-mail</string>
+</resources>
