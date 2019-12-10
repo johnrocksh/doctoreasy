@@ -8,9 +8,9 @@
 
 
     <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="335dp"
-        android:layout_height="104dp"
+        android:id="@+id/imageViewLogotip"
+        android:layout_width="344dp"
+        android:layout_height="83dp"
         android:layout_marginTop="72dp"
         android:background="@drawable/enter_page_logo"
         android:foreground="@drawable/enter_page_logo"
@@ -19,28 +19,31 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView5"
+        android:id="@+id/imageViewLogin"
+        android:layout_width="242dp"
+        android:layout_height="99dp"
+        android:layout_marginTop="72dp"
+        android:clickable="true"
+        android:onClick="imageViewLoginClick"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="@+id/imageViewLogin2"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewLogotip"
+        app:srcCompat="@drawable/btn_loogin" />
+
+    <ImageView
+        android:id="@+id/imageViewSignUp2"
         android:layout_width="242dp"
         android:layout_height="99dp"
         android:layout_marginTop="12dp"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/imageView4"
-        app:layout_constraintTop_toBottomOf="@+id/imageView6"
-        app:layout_constraintVertical_bias="0.008"
+        app:layout_constraintStart_toStartOf="@+id/imageViewSignUp"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewLogin"
+        app:layout_constraintVertical_bias="0.027"
         app:srcCompat="@drawable/btn_signup2" />
 
     <ImageView
-        android:id="@+id/imageView6"
-        android:layout_width="242dp"
-        android:layout_height="99dp"
-        android:layout_marginTop="220dp"
-        app:layout_constraintStart_toStartOf="@+id/imageView7"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3"
-        app:srcCompat="@drawable/btn_loogin" />
-
-    <ImageView
-        android:id="@+id/imageView4"
+        android:id="@+id/imageViewSignUp"
         android:layout_width="242dp"
         android:layout_height="99dp"
         android:layout_marginTop="12dp"
@@ -48,20 +51,22 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView6"
-        app:layout_constraintVertical_bias="0.008"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewLogin"
+        app:layout_constraintVertical_bias="0.023"
         app:srcCompat="@drawable/btn_signup" />
 
     <ImageView
-        android:id="@+id/imageView7"
+        android:id="@+id/imageViewLogin2"
         android:layout_width="242dp"
         android:layout_height="99dp"
         android:layout_marginTop="72dp"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toTopOf="@+id/imageView5"
-        app:layout_constraintStart_toStartOf="@+id/imageView5"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3"
-        app:layout_constraintVertical_bias="0.939"
+        android:clickable="true"
+        android:onClick="imageViewLoginClick"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/imageViewSignUp2"
+        app:layout_constraintStart_toStartOf="@+id/imageViewSignUp2"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewLogotip"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/btn_login2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
