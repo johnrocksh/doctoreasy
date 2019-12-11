@@ -1,3 +1,5 @@
+
+
 <resources>
     <string name="app_name">DoctoEasy</string>
     <string name="button_login">LOG IN</string>
@@ -11,5 +13,9 @@
     <string name="bottom_menu_search">Search</string>
     <string name="tv_bottom_menu_appointment">Appointment</string>
     <string name="image_view_bottom_menu_inbox" >Inbox</string>
-    <string name="text_view_bottom_menu_myaccaunt">My Accaunt</string>
+    <string name="text_view_bottom_menu_myaccaunt">Login</string>
+    <string name="text_view_forgot_password">Forgot password?</string>
+
+    <string name="muliextrabold">muliextrabold.ttf</string>
 </resources>
+

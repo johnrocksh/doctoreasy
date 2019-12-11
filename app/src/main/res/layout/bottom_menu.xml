@@ -18,7 +18,8 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/bottomBar"
         android:layout_width="0dp"
-        android:layout_height="59dp"
+        android:layout_height="68dp"
+        android:background="@drawable/bottom_menu_bg"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -30,7 +31,7 @@
             android:weightSum="5">
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/btnToHome"
+                android:id="@+id/btnSearch"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -40,7 +41,7 @@
                     android:id="@+id/constraintLayout4"
                     android:layout_width="24dp"
                     android:layout_height="24dp"
-                    android:layout_marginTop="6dp"
+                    android:layout_marginTop="12dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent">
@@ -50,6 +51,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:background="@drawable/bottom_menu_icon_search"
+
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -60,13 +62,13 @@
                     android:id="@+id/textViewSearch"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="7dp"
+                    android:layout_marginBottom="10dp"
                     android:text="@string/bottom_menu_search"
                     android:textAlignment="center"
 
                     android:textColor="#Ffffff"
-                    android:textSize="12sp"
-                    android:textStyle="bold"
+                    android:textSize="10sp"
+                    app:fontFamily="@font/muliblack"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent" />
@@ -75,7 +77,7 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/btnToCatalog"
+                android:id="@+id/btnAppointment"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -84,7 +86,7 @@
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="24dp"
                     android:layout_height="24dp"
-                    android:layout_marginTop="6dp"
+                    android:layout_marginTop="12dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent">
@@ -104,19 +106,19 @@
                     android:id="@+id/textViewAppointment"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="7dp"
+                    android:layout_marginBottom="10dp"
                     android:text="@string/tv_bottom_menu_appointment"
                     android:textAlignment="center"
                     android:textColor="#ffffff"
-                    android:textSize="12sp"
-                    android:textStyle="bold"
+                    android:textSize="10sp"
+                    app:fontFamily="@font/muliblack"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/btnToMailer"
+                android:id="@+id/btnInbox"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -125,7 +127,7 @@
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="24dp"
                     android:layout_height="24dp"
-                    android:layout_marginTop="6dp"
+                    android:layout_marginTop="12dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent">
@@ -145,19 +147,19 @@
                     android:id="@+id/textViewInbox"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="7dp"
+                    android:layout_marginBottom="10dp"
                     android:text="@string/image_view_bottom_menu_inbox"
                     android:textAlignment="center"
                     android:textColor="#ffffff"
-                    android:textSize="12sp"
-                    android:textStyle="bold"
+                    android:textSize="10sp"
+                    app:fontFamily="@font/muliblack"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/btnToSupport"
+                android:id="@+id/btnHealthCheck"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -166,7 +168,7 @@
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="24dp"
                     android:layout_height="24dp"
-                    android:layout_marginTop="6dp"
+                    android:layout_marginTop="12dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent">
@@ -186,19 +188,19 @@
                     android:id="@+id/textViewImageView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="7dp"
+                    android:layout_marginBottom="10dp"
                     android:text="HealthCheck"
                     android:textAlignment="center"
                     android:textColor="#ffffff"
-                    android:textSize="12sp"
-                    android:textStyle="bold"
+                    android:textSize="10sp"
+                    app:fontFamily="@font/muliblack"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/btnToProfile"
+                android:id="@+id/btnMyAccaunt"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -207,7 +209,7 @@
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="24dp"
                     android:layout_height="24dp"
-                    android:layout_marginTop="6dp"
+                    android:layout_marginTop="12dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent">
@@ -227,13 +229,13 @@
                     android:id="@+id/textViewMyAccaunt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="7dp"
+                    android:layout_marginBottom="10dp"
                     android:ellipsize="end"
                     android:maxLines="1"
                     android:text="@string/text_view_bottom_menu_myaccaunt"
                     android:textColor="#ffffff"
-                    android:textSize="12sp"
-                    android:textStyle="bold"
+                    android:textSize="10sp"
+                    app:fontFamily="@font/muliblack"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent" />
