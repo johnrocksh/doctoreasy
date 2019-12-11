@@ -1,8 +1,10 @@
 package com.webmaster.doctoeasy;
 
 
+import retrofit2.http.GET;
+import retrofit2.http.POST;
 
-    public interface ServerApi {
+public interface ServerApi {
 
 //        @GET("getProducts")
 //        List<Product> getProducts();
@@ -19,5 +21,5 @@ package com.webmaster.doctoeasy;
 //        @POST("createOrder")
 //        void createOrder(Order order);
 
-    }
+}
 

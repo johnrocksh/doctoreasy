@@ -4,69 +4,61 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFFF"
     tools:context=".MainActivity">
 
 
     <ImageView
         android:id="@+id/imageViewLogotip"
-        android:layout_width="344dp"
-        android:layout_height="83dp"
-        android:layout_marginTop="72dp"
+        android:layout_width="302dp"
+        android:layout_height="99dp"
+        android:layout_marginTop="92dp"
         android:background="@drawable/enter_page_logo"
         android:foreground="@drawable/enter_page_logo"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/editText"
+        app:layout_constraintStart_toStartOf="@+id/editText"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageViewLogin"
-        android:layout_width="242dp"
-        android:layout_height="99dp"
-        android:layout_marginTop="72dp"
-        android:clickable="true"
-        android:onClick="imageViewLoginClick"
-        android:visibility="visible"
-        app:layout_constraintStart_toStartOf="@+id/imageViewLogin2"
-        app:layout_constraintTop_toBottomOf="@+id/imageViewLogotip"
-        app:srcCompat="@drawable/btn_loogin" />
-
-    <ImageView
-        android:id="@+id/imageViewSignUp2"
-        android:layout_width="242dp"
-        android:layout_height="99dp"
-        android:layout_marginTop="12dp"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/imageViewSignUp"
-        app:layout_constraintTop_toBottomOf="@+id/imageViewLogin"
-        app:layout_constraintVertical_bias="0.027"
-        app:srcCompat="@drawable/btn_signup2" />
-
-    <ImageView
-        android:id="@+id/imageViewSignUp"
-        android:layout_width="242dp"
-        android:layout_height="99dp"
-        android:layout_marginTop="12dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/imageViewSignup"
+        android:layout_width="263dp"
+        android:layout_height="78dp"
+        android:layout_marginTop="24dp"
+        android:src="@drawable/btn_signup"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageViewLogin"
-        app:layout_constraintVertical_bias="0.023"
-        app:srcCompat="@drawable/btn_signup" />
+        app:layout_constraintTop_toBottomOf="@+id/imageViewLogin" />
 
     <ImageView
-        android:id="@+id/imageViewLogin2"
-        android:layout_width="242dp"
-        android:layout_height="99dp"
-        android:layout_marginTop="72dp"
-        android:clickable="true"
+        android:id="@+id/imageViewLogin"
+        android:layout_width="263dp"
+        android:layout_height="78dp"
+        android:layout_marginTop="32dp"
         android:onClick="imageViewLoginClick"
-        android:visibility="visible"
-        app:layout_constraintBottom_toTopOf="@+id/imageViewSignUp2"
-        app:layout_constraintStart_toStartOf="@+id/imageViewSignUp2"
-        app:layout_constraintTop_toBottomOf="@+id/imageViewLogotip"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/btn_login2" />
+        android:src="@drawable/btn_loogin"
+        app:layout_constraintEnd_toEndOf="@+id/imageViewSignup"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/imageViewSignup"
+        app:layout_constraintTop_toBottomOf="@+id/editText" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="307dp"
+        android:layout_height="105dp"
+        android:layout_marginTop="20dp"
+
+        android:background="@null"
+        android:ems="10"
+        android:enabled="false"
+        android:focusable="false"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ."
+        android:textColor="@android:color/darker_gray"
+        android:textSize="22dp"
+        app:layout_constraintEnd_toEndOf="@+id/imageViewLogin"
+        app:layout_constraintHorizontal_bias="0.568"
+        app:layout_constraintStart_toStartOf="@+id/imageViewLogin"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewLogotip" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
