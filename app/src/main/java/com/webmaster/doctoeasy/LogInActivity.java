@@ -16,7 +16,6 @@ public class LogInActivity extends AppCompatActivity {
  ImageView imageViewOrangeCube;
  TextView  textViewPageName;
  TextView  textViewForgotPassword;
-
  ConstraintLayout mConstraintLayout;
 
 
@@ -29,24 +28,17 @@ public class LogInActivity extends AppCompatActivity {
         /*jr code*/
         initActivity();
 
-
-
     }
 
     private void initActivity() {
 
         imageViewOrangeCube=findViewById(R.id.imageViewOrangeCube);
         textViewPageName=findViewById(R.id.textViewPageName);
-        textViewPageName.setText("Log in");
-
+        textViewPageName.setText(R.string.text_view_login);
         textViewForgotPassword=findViewById(R.id.textViewForgotPassword);
-        textViewForgotPassword.setText("Forgot password?");
-
+        textViewForgotPassword.setText(R.string.text_view_forgot_password);
         mConstraintLayout=(ConstraintLayout) findViewById(R.id.btnMyAccaunt);
         mConstraintLayout.setBackgroundResource(R.drawable.bottom_menu_pressed_bg);
-
-
-
 
     }
 
@@ -67,5 +59,8 @@ public class LogInActivity extends AppCompatActivity {
 
     }
 
-
+    public void buttonArrowNextClick(View view) {
+        Intent intent=new Intent(LogInActivity.this,SignUpActivity.class);
+        startActivity(intent);
+    }
 }
