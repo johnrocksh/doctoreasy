@@ -39,8 +39,8 @@
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/constraintLayout4"
-                    android:layout_width="33dp"
-                    android:layout_height="33dp"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
                     android:layout_marginTop="12dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -67,8 +67,8 @@
                     android:textAlignment="center"
 
                     android:textColor="#Ffffff"
-                    android:textSize="10sp"
-                    app:fontFamily="@font/muliblack"
+                    android:textSize="11dp"
+                    app:fontFamily="@font/muliregular"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent" />
@@ -84,8 +84,8 @@
                 android:background="@drawable/bottom_menu_bg">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="33dp"
-                    android:layout_height="33dp"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
                     android:layout_marginTop="12dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -110,8 +110,8 @@
                     android:text="@string/tv_bottom_menu_appointment"
                     android:textAlignment="center"
                     android:textColor="#ffffff"
-                    android:textSize="10sp"
-                    app:fontFamily="@font/muliblack"
+                    android:textSize="11dp"
+                    app:fontFamily="@font/muliregular"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent" />
@@ -125,8 +125,8 @@
                 android:background="@drawable/bottom_menu_bg">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="33dp"
-                    android:layout_height="33dp"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
                     android:layout_marginTop="12dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -151,8 +151,8 @@
                     android:text="@string/image_view_bottom_menu_inbox"
                     android:textAlignment="center"
                     android:textColor="#ffffff"
-                    android:textSize="10sp"
-                    app:fontFamily="@font/muliblack"
+                    android:textSize="11dp"
+                    app:fontFamily="@font/muliregular"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent" />
@@ -166,8 +166,8 @@
                 android:background="@drawable/bottom_menu_bg">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="36dp"
-                    android:layout_height="33dp"
+                    android:layout_width="32dp"
+                    android:layout_height="24dp"
                     android:layout_marginTop="12dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -189,11 +189,11 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="10dp"
-                    android:text="HealthCheck"
+                    android:text="Health Check"
                     android:textAlignment="center"
                     android:textColor="#ffffff"
-                    android:textSize="10sp"
-                    app:fontFamily="@font/muliblack"
+                    android:textSize="11dp"
+                    app:fontFamily="@font/muliregular"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent" />
@@ -207,8 +207,8 @@
                 android:background="@drawable/bottom_menu_bg">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="33dp"
-                    android:layout_height="33dp"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
                     android:layout_marginTop="12dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -234,8 +234,8 @@
                     android:maxLines="1"
                     android:text="@string/text_view_bottom_menu_myaccaunt"
                     android:textColor="#ffffff"
-                    android:textSize="10sp"
-                    app:fontFamily="@font/muliblack"
+                    android:textSize="11dp"
+                    app:fontFamily="@font/muliregular"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent" />
