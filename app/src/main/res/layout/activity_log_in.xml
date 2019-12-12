@@ -6,30 +6,44 @@
     android:layout_height="match_parent"
     tools:context=".LogInActivity">
 
-    <ImageView
-        android:id="@+id/imageViewMyAccount"
+    <include
+        android:id="@+id/include"
+
+        layout="@layout/top_header"
         android:layout_width="0dp"
-        android:layout_height="217dp"
-        android:background="@drawable/top_bg"
+        android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+      <ImageView
+        android:id="@+id/imageViewBackArrow"
+        android:layout_width="26dp"
+        android:layout_height="24dp"
+        android:onClick="backArrowClick"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewMyAccount"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.051"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.082"
+        app:srcCompat="@drawable/arrow_back" />
 
     <TextView
         android:id="@+id/textViewEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="44dp"
         android:text="@string/email_addres"
-
         android:textColor="#3F535F"
         android:textSize="18sp"
         android:textStyle="bold"
         app:fontFamily="@font/muli_extrabold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageViewMyAccount" />
+        app:layout_constraintTop_toBottomOf="@+id/include"
+        tools:ignore="MissingConstraints" />
 
     <EditText
         android:id="@+id/editTextPassword"
@@ -82,32 +96,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextEmail" />
 
-    <ImageView
-        android:id="@+id/imageViewBackArrow"
-        android:layout_width="26dp"
-        android:layout_height="24dp"
-        android:onClick="backArrowClick"
-        app:layout_constraintBottom_toBottomOf="@+id/imageViewMyAccount"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.051"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.082"
-        app:srcCompat="@drawable/arrow_back" />
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/text_login"
-        android:textColor="#FFFFFF"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        app:fontFamily="@font/muli_extrabold"
-        app:layout_constraintBottom_toBottomOf="@+id/imageViewMyAccount"
-        app:layout_constraintStart_toStartOf="@+id/imageViewBackArrow"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.841" />
+
 
 
     <ImageView
@@ -116,6 +106,8 @@
         android:layout_height="28dp"
         android:layout_marginStart="20dp"
         android:layout_marginLeft="20dp"
+        android:contextClickable="true"
+        android:onClick="checkBoxOnClick"
         app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -160,6 +152,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
+
+
+
         <include
             layout="@layout/bottom_menu"
             android:layout_width="0dp"
@@ -169,18 +164,19 @@
             app:layout_constraintStart_toStartOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <TextView
-        android:id="@+id/textViewForgotRegistration"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/text_view_forgot_password"
-        android:textColor="#FFFFFF"
-        app:fontFamily="@font/muli_extrabold"
-        app:layout_constraintBottom_toBottomOf="@+id/imageViewBackArrow"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.906"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageViewBackArrow"
-        app:layout_constraintVertical_bias="0.081" />
+
+
+    <ImageView
+        android:id="@+id/imageViewOrangeCube"
+        android:layout_width="20dp"
+        android:layout_height="22dp"
+        android:visibility="invisible"
+        android:clickable="true"
+        android:onClick="checkBoxOnClick"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewRememberme"
+        app:layout_constraintEnd_toEndOf="@+id/imageViewRememberme"
+        app:layout_constraintStart_toStartOf="@+id/imageViewRememberme"
+        app:layout_constraintTop_toTopOf="@+id/imageViewRememberme"
+        app:srcCompat="@drawable/cb_orange" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

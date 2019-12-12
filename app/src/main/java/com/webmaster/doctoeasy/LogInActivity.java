@@ -7,9 +7,14 @@ import android.os.Bundle;
 import android.text.Layout;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 public class LogInActivity extends AppCompatActivity {
 
+ ImageView imageViewOrangeCube;
+ TextView  textViewPageName;
+ TextView textViewForgotPassword;
 
  public Layout layout;
     @Override
@@ -17,21 +22,43 @@ public class LogInActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_log_in);
 
-        //activity initialization
-        init();
+        /*jr code*/
+        initActivity();
 
 
 
     }
 
-    private void init() {
-        View myLayout = LayoutInflater.from(this).inflate(R.layout.bottom_menu,null);
-        View layout=(View)myLayout.findViewById(R.id.btnMyAccaunt);
-        layout.setBackgroundResource(R.drawable.bottom_menu_pressed_bg);
+    private void initActivity() {
+
+        imageViewOrangeCube=findViewById(R.id.imageViewOrangeCube);
+            textViewPageName=findViewById(R.id.textViewPageName);
+            textViewPageName.setText("Log in");
+
+                textViewForgotPassword=findViewById(R.id.textViewForgotPassword);
+                textViewForgotPassword.setText("Forgot password?");
+
+
+
+
     }
 
     public void backArrowClick(View view) {
         Intent intent= new Intent(LogInActivity.this,MainActivity.class);
         startActivity(intent);
     }
+
+    public void checkBoxOnClick(View view) {
+
+        if(imageViewOrangeCube.getVisibility()==view.VISIBLE){
+            imageViewOrangeCube.setVisibility(view.INVISIBLE);
+        }
+        else{
+           imageViewOrangeCube.setVisibility(view.VISIBLE);
+        }
+
+
+    }
+
+
 }
