@@ -23,20 +23,14 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
     imageViewSignUp=findViewById(R.id.imageViewSignup);
 
     }
 
 
-
     public void imageViewLoginClick(View view) {
-
 
             Intent intent =new Intent(MainActivity.this,LogInActivity.class);
             startActivity(intent);
-
-
-
     }
 }
