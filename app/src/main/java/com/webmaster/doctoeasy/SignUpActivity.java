@@ -6,9 +6,12 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class SignUpActivity extends AppCompatActivity {
 
@@ -42,5 +45,19 @@ public class SignUpActivity extends AppCompatActivity {
     public void backArrowClick(View view) {
         Intent intent= new Intent(SignUpActivity.this,LogInActivity.class);
         startActivity(intent);
+    }
+
+    public void patientBtnOnClick(View view) {
+    Intent intent=new Intent(SignUpActivity.this,SignUpPatientActivity.class);
+    startActivity(intent);
+    }
+
+    public void SpecialisButtooOnClick(View view) {
+
+    }
+
+    public void ClinicButtonOnClick(View view) {
+
+
     }
 }

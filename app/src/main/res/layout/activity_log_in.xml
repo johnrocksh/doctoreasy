@@ -45,23 +45,6 @@
         tools:ignore="MissingConstraints" />
 
     <EditText
-        android:id="@+id/editTextPassword"
-        android:layout_width="0dp"
-        android:layout_height="45dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginRight="20dp"
-        android:background="@drawable/tv_login_bg"
-        android:ems="10"
-        android:paddingLeft="3dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewPassword" />
-
-    <EditText
         android:id="@+id/editTextEmail"
         android:layout_width="0dp"
         android:layout_height="45dp"
@@ -107,7 +90,7 @@
         android:layout_marginLeft="20dp"
         android:contextClickable="true"
         android:onClick="checkBoxOnClick"
-        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayoutBottomMenu"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -144,7 +127,7 @@
         app:srcCompat="@drawable/btn_orange_next" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout"
+        android:id="@+id/constraintLayoutBottomMenu"
         android:layout_width="0dp"
         android:layout_height="62dp"
         android:background="#ffffff"
@@ -178,5 +161,24 @@
         app:layout_constraintStart_toStartOf="@+id/imageViewRememberme"
         app:layout_constraintTop_toTopOf="@+id/imageViewRememberme"
         app:srcCompat="@drawable/cb_orange" />
+
+    <EditText
+        android:id="@+id/editTextPassword"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/tv_login_bg"
+        android:ems="10"
+        android:paddingLeft="3dp"
+        android:password="true"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayoutBottomMenu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewPassword"
+        app:layout_constraintVertical_bias="0.058" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
