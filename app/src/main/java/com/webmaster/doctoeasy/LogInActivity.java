@@ -1,6 +1,7 @@
 package com.webmaster.doctoeasy;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -14,7 +15,10 @@ public class LogInActivity extends AppCompatActivity {
 
  ImageView imageViewOrangeCube;
  TextView  textViewPageName;
- TextView textViewForgotPassword;
+ TextView  textViewForgotPassword;
+
+ ConstraintLayout mConstraintLayout;
+
 
  public Layout layout;
     @Override
@@ -32,11 +36,14 @@ public class LogInActivity extends AppCompatActivity {
     private void initActivity() {
 
         imageViewOrangeCube=findViewById(R.id.imageViewOrangeCube);
-            textViewPageName=findViewById(R.id.textViewPageName);
-            textViewPageName.setText("Log in");
+        textViewPageName=findViewById(R.id.textViewPageName);
+        textViewPageName.setText("Log in");
 
-                textViewForgotPassword=findViewById(R.id.textViewForgotPassword);
-                textViewForgotPassword.setText("Forgot password?");
+        textViewForgotPassword=findViewById(R.id.textViewForgotPassword);
+        textViewForgotPassword.setText("Forgot password?");
+
+        mConstraintLayout=(ConstraintLayout) findViewById(R.id.btnMyAccaunt);
+        mConstraintLayout.setBackgroundResource(R.drawable.bottom_menu_pressed_bg);
 
 
 
