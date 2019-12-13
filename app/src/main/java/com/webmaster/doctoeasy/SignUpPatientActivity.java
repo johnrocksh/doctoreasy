@@ -42,4 +42,7 @@ public class SignUpPatientActivity extends AppCompatActivity {
         Intent intent =new Intent(SignUpPatientActivity.this,SignUpActivity.class);
         startActivity(intent);
     }
+
+    public void checkBoxOnClick(View view) {
+    }
 }
