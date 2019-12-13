@@ -1,0 +1,700 @@
+0-ожидает ответа 1 - Принят 2- Отклонён 3-Смена времени 4 - не утверждена смена времени 5-отменен пользователем
+/* Авторизация */
+loginController
+	/*
+ * Контроллер для авторизиций в приложении
+ * @param Email @param password
+ *
+ * @return JSON_ENCODE array $returnData
+ * $returnData[status] - 0 если произошла ошибка в авторизации : 1 - если успешная авторизация
+ * $returnData[user_type] - тип пользовтателя 1 - пациент : 2 - cпециалист : 3 - клиника
+ * $returnData[user_info] - инфо о профиле
+ */
+Пример
+loginController
+ loginController
+ email
+ password
+pacientRegisterController
+/*
+ * Контроллер для регистрации пациента в приложении
+ * @param firstName @param lastName @param gender ( enum('male', 'female') ) @param birth_date @param phone @param email @param password @param subscribe ( bool )
+ *
+ * @return JSON_ENCODE array $returnData
+ * $returnData[status] - 0 если произошла ошибка в регистрации : 1 - если успешная регистрация
+ * $returnData[error_msg] - текст ошибки [ только если статус 0 ]
+ */
+getLangList
+/*
+ *
+ * высылает список всех доступных языков
+ *
+ * @return json array
+ * [
+ * 	{ id : (int), title : (str) }
+ * ]
+ *
+ */
+getSpecialtyList
+/*
+ * Получает список специальностей
+ * @return json array
+	[
+		{ id : `str`, title: `str` } ,
+		...
+	]
+ *
+ */
+specialistRegisterController
+/*
+ * Контроллер для регистрации пациента в приложении
+ * @param specialty_id ( specialty_id )
+ * @param firstName
+ * @param lastName
+ * @param gender ( enum('male', 'female') )
+ * @param birth_date
+ * @param phone
+ * @param email
+ * @param password
+ * @param subscribe ( bool )
+ *
+ * @return JSON_ENCODE array $returnData
+ * $returnData[status] - 0 если произошла ошибка в регистрации : 1 - если успешная регистрация
+ * $returnData[error_msg] - текст ошибки [ только если статус 0 ]
+ */
+changeUserPassword
+/*
+ * Контроллер для сменны пароля пользователя
+ * @param user_id
+ * @param oldPassword
+ * @param newPassword
+
+ *
+ * @return JSON_ENCODE array $returnData
+ * $returnData[status] - 0 если произошла ошибка : 1 - если успешная смена пароля
+ * $returnData[error_msg] - текст ошибки [ только если статус 0 ]
+ */
+changePersonalSettings
+// таск смены персональных данных
+/*
+ * @param['user_id']
+ * @param['name']
+ * @param['surname']
+ * @param['gender']
+ * @param['birthDate']
+ * @param['phone']
+ *
+ * @return JSON_ENCODE array $returnData
+ * $returnData[status] - 0 если произошла ошибка : 1 - если успешная смена данных
+ * $returnData[error_msg] - текст ошибки [ только если статус 0 ]
+ */
+changeSpecialistInfo
+/*
+ * Меняет языки и about
+ * @param['user_id']
+ * @oaram['languages'] json array
+ * @param['about']
+ *
+ * return status
+ *
+*/
+restorePasswordController
+//отсылает новый пароль пользователю на email
+/*
+ * @param['email']
+ *
+ * @return JSON_ENCODE array $returnData
+ * $returnData[status] - 0 если произошла ошибка : 1 - если успешная смена данных
+ * $returnData[error_msg] - текст ошибки [ только если статус 0 ]
+ */
+changeMainServicesFee
+//функция для смены стоимости основных услуг
+/*
+ * @param['user_id']
+ * @param['firstConsultCost']
+ * @param['followUpConsultCost']
+ *
+ * @return JSON_ENCODE array $returnData
+ * $returnData[status] - 0 если произошла ошибка : 1 - если успешная смена данных
+ * $returnData[error_msg] - текст ошибки [ только если статус 0 ]
+ *
+ */
+getAppDictionary
+//Возвращает словарь
+/*
+ * @return {
+ *		`MSG_MOBILE_APP_CODE` : `VALUE`
+ *	}
+ *
+ */
+uploadProfileImage
+/*
+ * Загружает изображение профаила
+ * @param['user_id']
+ * @param['image']
+ *
+ * @return status
+ */
+getSpecialists
+//получает список всех специалистов
+/*
+ * $return- array
+ * 	$returnArray
+ * 		[
+ * 			{
+ * 				personal_info{
+ * 					name,
+ * 					surname,
+ * 					image,
+ * 					birthdate,
+ * 					phone,
+ * 					gender
+ * 				}
+ * 				specialized_information{
+ * 					specialty_id,
+ * 					fee_firstConsult,
+ * 					fee_followUpConsult
+ * 				}
+ * 			}
+ * 		]
+ *
+ */
+getClinics
+//получает клиники
+/*
+ * $return- array
+ * 	$returnArray
+ * 		[
+ * 			{
+ * 				general_info{
+ * 					id,
+ * 					title,
+ * 					phone,
+ * 					image,
+ * 					rating,
+ * 					reviews,
+ * 					clinicType,
+ * 					about
+ * 				}
+ * 				locations[
+ * 					{
+ * 						id,
+ * 						location_city,
+ * 						location_adress,
+ * 						location_lat,
+ * 						location_lng,
+ * 						schedule,
+ * 					}
+ * 				]
+ * 			}
+ * 		]
+ *
+ */
+addReview
+/*
+ * Добавление комментария
+ * @param user_from
+ * @param user_to
+ * @param rating
+ * @param text
+ *
+ * @return status
+ */
+getReviews
+/*
+ * получение списка комментариев
+ * @param user_id
+ *
+ * @return array
+ * [
+ * 	{
+ * 		from_id,
+ * 		rating,
+ * 		text,
+ * 		date
+ * 	}
+ * ]
+ */
+getUserFolders
+/*
+ * Получает папки пользователя
+ * @param user_id
+ * @return array
+ * [
+ * 	{
+ * 		id,
+ * 		title
+ * 	},
+ * 	...
+ * ]
+ */
+createFolder
+/*
+ * создаёт папку
+ * @param user_id
+ * @param folder_name
+ *
+ */
+sendMail
+/*
+ * отправляет mail
+ * @param user_from
+ * @param user_to
+ * @param subject
+ * @param mailBody
+ * @param attachment
+ *
+ * @return status
+ */
+getMails
+/*
+ * получает письма пользователя
+ * @param user_id
+ * @param folder [ folder_id OR 'inbox' OR 'sent' OR 'all' ]
+ *
+ * @return array
+ * [
+ * 	{
+ * 		userFrom
+ * 		userTo
+ * 		subject
+ * 		mailBody
+ * 		isReaded
+ * 		date
+ * 		attachment_id
+ * 	},
+ * 	...
+ * ]
+ */
+1
+
+getMails_ios
+ folder ["inbox"|"sent"|"all"| folder name]
+user_id
+
+folder
+
+shownotices
+ user_id
+user_id
+
+markAsReaded
+/*
+ * @param mail_id
+ *
+ * @return status
+ *
+ * */
+mail_id
+
+markAsUnReaded
+/*
+ * @param mail_id
+ *
+ * @return status
+ *
+ * */
+newClinicAppointment
+/*
+ * New appoinment
+ * @param user_id
+ * @param specialist_id
+ * @oaram location_id
+ * @param service_id
+ * @param comment
+ * @param date_to
+ * @param contact_email
+ * @param contact_phone
+ *
+ * @return status
+ */
+ДОБАВДЕНИЕ ЗАПИСИ К ВРАЧУ
+newAppointment
+user_id
+specialist_id
+location_id
+service_id
+comment
+date_to (YYYY-MM-DD)
+contact_email
+contact_phone
+Array
+(
+    [status] => 0 | 1
+    [error] =>  We'r sorry, that specialist already have and appointment on this time | There was an error, please try again
+)
+status 0 | 1 - записалось или нет
+error - текст ошибки, если она возникла
+declineAppointment
+/*
+ * отклоняет appointment
+ * @param appointment_id
+ *
+ * @return status
+ */
+acceptAppointment
+/*
+ * принимает appointment
+ * @param appointment_id
+ *
+ * @return status
+ */
+getSpecialistInfo
+/*
+ *
+ * Выдаёт дополнительную ин-фию врача
+ * @param specialist_id
+ *
+ * @return
+ * {
+ * 	text_info : {
+ * 		'medicalBodyRegistation' = (str)
+ * 		'professional_background' = (str)
+ * 		'education' = (str)
+ * 		'awards' = (str)
+ * 	},
+ * 	services: [
+ * 		{
+ * 			id : (int)
+ * 			title: (str)
+ * 			price: ( float )
+ * 		},
+ * 		...
+ * 	],
+ * 	comments :
+	[
+		{
+			"user_id",
+			"text",
+			"rating",
+			"date"
+		}
+	]
+ *
+ * }
+ *
+ */
+getAllAppointments
+/*
+ * получает все appointments
+ *
+ * @return
+ * [
+ * 	{
+	    id,
+		user_id,
+		specialist_id,
+		location_id",
+		service_id",
+		comment",
+		date_to",
+		date",
+		status",
+		contact_email",
+		contact_phone"
+ * 	},
+ * 	...
+ * ]
+ *
+ *
+ */
+getUserAppointments
+/*
+ * @param user_id
+ * @param date
+ *
+ * */
+user_id
+
+date
+
+getVisitReasons
+
+fetchClinicVisitReasons
+
+getTreatment_procedures
+	/*
+ * xxx
+ */
+getDiagnostic_methods
+
+getHealth_disorders
+	/*
+ * xxx
+ */
+searchAutocomplete
+/*
+ * @param search_string
+ *
+ * @return array
+ * 		array['specialties'] :
+ * 			[
+ * 				{
+ * 					`id`,
+ * 					`title`
+ * 				}
+ * 			],
+ * 		array['treatment_procedures'] :
+ * 			[
+ * 				{
+ * 					`id`,
+ * 					`title`
+ * 				}
+ * 			],
+ * 		array['diagnostic_methods'] :
+ * 			[
+ * 				{
+ * 					`id`,
+ * 					`title`
+ * 				}
+ * 			],
+ * 		array['health_disorders'] :
+ * 			[
+ * 				{
+ * 					`id`,
+ * 					`title`
+ * 				}
+ * 			],
+ *		array['specialists'] :
+ * 			[
+ * 				{
+ * 					`id`
+ * 				}
+ * 			],
+ * 		array['clinics'] :
+ * 			[
+ * 				{
+ * 					`user_id`,
+ * 					`title`
+ * 				}
+ * 			],
+ * 		'status' : 0 || 1
+ */
+getUserName
+/*
+ * @param user_id
+ * @return status
+ * 			0 && error || 1 && user_name
+ */
+setSchedule
+/*
+ * @param user_id
+ * @oaram location_id
+ * @param schedule
+ *
+ * @return status
+ */
+getArticles
+/*
+ * @param type - 1 2 3
+ *
+ */
+getCities
+
+searchAction
+/*
+ * @param [specialty_id]
+ * @param [date]
+ * @param [location_id]
+ * @param [sort_id]
+ *
+ * @return []
+ */
+
+searchPagAction
+specialty_id
+location_id
+page
+sort_id
+
+getUserInfo_IOS
+id
+getUserServices_IOS
+id
+isClinic?
+getUserAbout_IOS
+isClinic?
+getUserSchedule_IOS
+id
+schedule_id
+getUserComments_IOS
+/*
+ * @param id
+ * @param limit
+ *
+ */
+get_Autocomplete_IOS
+/*
+ *
+ * @param key
+ */
+getDatesState
+/*
+ *
+ * @param schedule_id
+ */
+getClinicDatesState
+schedule_id
+getBookInfo
+location_id
+user_id
+
+getPersonalInfo_IOS
+user_id
+searchClinics
+
+searchPagClinics
+page
+getClinicDetails
+id
+getClinicPersonal
+id
+getPhoneNumber_IOS
+
+changePersonalInfo_IOS
+firstName
+last_name
+gender
+birthdate
+phone
+id
+fetchDoctorsAppointments
+id
+date
+fetchClinicsAppointments
+id
+date
+fetch_calendarStatus
+id
+date
+fetchAppointmentInfo
+id
+fetchClinicAppointmentInfo
+id
+fetchClinicsLegend
+id
+fetchDoctorReviews
+id
+fetchLocationInfo
+id
+updateLocationInfo
+user_id
+location_adress
+location_lat
+location_lng
+title
+color
+location_id
+
+fetchSchedule_IOS
+location_id
+id
+schedule_id
+updateSchedule_IOS
+location_id
+schedule
+id
+getHealthCheckQuestions
+
+sendHealthCheckAnsewers
+data
+checkHealthCheckStatus
+id
+resetHealthCheckStatus
+id
+getHealthCheckResults
+id
+fetchBadges
+id
+clinicRegisterController
+email
+password
+phone
+title
+
+UpdateProfileImage
+file['image']
+updateProfileImage_IOS
+newImage
+patientDeclineAppointment
+id
+fetchUserLocations
+id
+patientUpdateAppointmentTime
+appointment_id
+specialist_id
+newDate
+getCheckupImage
+
+setCheckUpPassedStatement
+check_up_id
+user_id
+deleteMail_IOS
+mail_id
+user_id
+getUserEmail_IOS
+id
+fetchMailFolders
+id
+setNewMailFolders
+mail_id
+fetchClinicTypes
+
+getClinicInfo
+id
+updateClinicInfo
+	старый алгоритм нихера не работает
+title
+awards
+bdyRegistration
+clinicType
+id
+getProfileClinicPersonal
+id
+
+removeUserFromClinic
+user_id
+specialist_daily_schedule
+/* * @param location_id * */
+
+users_appointments
+/* * @param user_id * */
+
+users_appointments_dates
+/* * @param user_id * */
+
+specialist_appointments
+/* * @param specialist_id * */
+
+/* * @param folder_id * @param mail_id * */
+remove_from_mail_folder_connector
+/* * @param folder_id * @param mail_id * */
+create_new_mail_folder_connector
+XXX
+xxx
+XXX
+xxx
+XXX
+xxx
+XXX
+xxx
+XXX
+xxx
+XXX
+xxx
+XXX
+xxx
+XXX
+xxx
+XXX
+xxx
+XXX
+xxx
+XXX
+xxx
+XXX
+xxx
+XXX
+xxx
+XXX
+xxx

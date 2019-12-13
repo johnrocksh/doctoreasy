@@ -42,6 +42,7 @@
         app:layout_constraintTop_toBottomOf="@+id/editText" />
 
     <EditText
+        android:textAlignment="gravity"
         android:id="@+id/editText"
         android:layout_width="307dp"
         android:layout_height="105dp"

@@ -17,5 +17,6 @@
     <string name="muliextrabold">muliextrabold.ttf</string>
     <string name="text_view_sign_up">Sign up</string>
     <string name="text_view_login">Log in</string>
+    <string name="page_name_patient">Patient</string>
 </resources>
 

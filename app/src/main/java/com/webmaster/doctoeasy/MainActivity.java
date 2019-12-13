@@ -16,21 +16,17 @@ public class MainActivity extends Activity {
     ImageView imageViewLogin;
     ImageView imageViewSignUp;
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-    imageViewSignUp=findViewById(R.id.imageViewSignup);
+        imageViewSignUp=findViewById(R.id.imageViewSignup);
 
     }
-
-
     public void imageViewLoginClick(View view) {
 
-            Intent intent =new Intent(MainActivity.this,LogInActivity.class);
-            startActivity(intent);
+        Intent intent =new Intent(MainActivity.this,LogInActivity.class);
+        startActivity(intent);
     }
 }
