@@ -18,5 +18,15 @@
     <string name="text_view_sign_up">Sign up</string>
     <string name="text_view_login">Log in</string>
     <string name="page_name_patient">Patient</string>
+    <string name="text_view_i_want_news_latter_subscription">I want news latter subscription</string>
+    <string name="text_view_i_accept_the_rulles_and_conditions">I accept the rulles and conditions</string>
+    <string name="text_view_first_name">FIRST NAME</string>
+    <string name="text_view_last_name">LAST NAME</string>
+    <string name="text_view_gender">GENDER</string>
+    <string name="text_view_date_of_birth">DATE OF BIRTH</string>
+    <string name="text_view_phone_number">PHONE NUMBER</string>
+    <string name="text_view_password">PASSWORD</string>
+    <string name="text_view_confirm_password">CONFIRM PASSWORD</string>
+    <string name="text_view_email">EMAIL</string>
 </resources>
 

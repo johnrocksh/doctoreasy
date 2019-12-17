@@ -149,20 +149,18 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-
     <ImageView
         android:id="@+id/imageViewOrangeCube"
-        android:layout_width="20dp"
-        android:layout_height="22dp"
-        android:visibility="invisible"
+        android:layout_width="11dp"
+        android:layout_height="11dp"
         android:clickable="true"
         android:onClick="checkBoxOnClick"
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="@+id/imageViewRememberme"
         app:layout_constraintEnd_toEndOf="@+id/imageViewRememberme"
         app:layout_constraintStart_toStartOf="@+id/imageViewRememberme"
         app:layout_constraintTop_toTopOf="@+id/imageViewRememberme"
-        app:srcCompat="@drawable/cb_orange"
-        />
+        app:srcCompat="@drawable/cb_orange" />
 
     <EditText
         android:id="@+id/editTextPassword"

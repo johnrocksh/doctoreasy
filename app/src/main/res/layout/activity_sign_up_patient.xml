@@ -13,8 +13,10 @@
             android:layout_height="0dp"
             app:layout_constraintBottom_toTopOf="@+id/include2"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0">
 
                 <LinearLayout
                     android:id="@+id/LinearLayoutCenter"
@@ -48,131 +50,202 @@
 
 
                         <TextView
-                            android:id="@+id/textView9"
+                            android:id="@+id/textViewFirstName"
                             style="@style/styles_TextViewPatient"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="20dp"
                             android:layout_marginTop="20dp"
-                            android:text="FIRST NAME" />
+                            android:text="@string/text_view_first_name" />
+
+
 
                         <EditText
-                            android:id="@+id/editText6"
+                            android:id="@+id/editTextFirstName"
                             style="@style/styles_EditTextPatient"
-                            android:layout_width="match_parent"
-
-                            android:layout_marginLeft="20dp"
-                            android:layout_marginRight="20dp"
-                            android:ems="10"
-                            android:inputType="textPersonName"
                              />
 
                         <TextView
-                            android:id="@+id/textView8"
+                            android:id="@+id/textViewLastName"
                             style="@style/styles_TextViewPatient"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="20dp"
                             android:layout_marginTop="20dp"
-                            android:text="LAST NAME" />
+                            android:text="@string/text_view_last_name" />
 
                         <EditText
-                            android:id="@+id/editText5"
+                            android:id="@+id/editTextLastName"
                             style="@style/styles_EditTextPatient"
-                            android:layout_width="match_parent"
-                            android:layout_marginLeft="20dp"
-                            android:layout_marginRight="20dp"
-                            android:ems="10"
-                            android:inputType="textPersonName" />
+                           android:ems="10" />
 
                         <TextView
-                            android:id="@+id/textView11"
+                            android:id="@+id/textViewGender"
                             style="@style/styles_TextViewPatient"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="20dp"
-                            android:text="GENDER" />
+                            android:layout_marginTop="20dp"
+                            android:text="@string/text_view_gender" />
 
-                        <Spinner
-                            android:id="@+id/spinner"
+                        <LinearLayout
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content" />
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                                <RadioGroup
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:fontFamily="@font/muli_extrabold"
+                                    android:layout_weight="1"
+                                    android:orientation="horizontal">
+
+                                        <RadioButton
+                                            android:id="@+id/radioButtonFemale"
+                                            android:fontFamily="@font/muli_extrabold"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="20dp"
+                                            android:layout_weight="1"
+                                            android:text="Female"
+                                            android:textColor="#3f535f" />
+
+                                        <RadioButton
+                                            android:id="@+id/radioButtonMale"
+                                            android:fontFamily="@font/muli_extrabold"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="20dp"
+                                            android:layout_weight="1"
+                                            android:checked="true"
+                                            android:text="Male"
+                                            android:textColor="#3f535f" />
+                                </RadioGroup>
+
+                        </LinearLayout>
 
                         <TextView
-                            android:id="@+id/textView12"
+                            android:id="@+id/textViewDateOfBirth"
                             style="@style/styles_TextViewPatient"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="20dp"
-                            android:text="DATE OF BIRTH" />
+                            android:layout_marginTop="20dp"
+                            android:text="@string/text_view_date_of_birth" />
 
-                        <Spinner
-                            android:id="@+id/spinner2"
+                        <androidx.constraintlayout.widget.ConstraintLayout
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content" />
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+
+                            android:onClick="dataBirthOnClick">
+
+                                <EditText
+                                    android:id="@+id/editTextDateOfBirth"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="0dp"
+                                    android:background="@null"
+                                    android:focusable="false"
+
+                                    android:layout_marginLeft="10dp"
+                                    android:ems="10"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="@+id/bg_imageViewDateOfBirth"
+                                    app:layout_constraintHorizontal_bias="0.0"
+                                    app:layout_constraintStart_toStartOf="@+id/bg_imageViewDateOfBirth"
+                                    android:onClick="dataBirthOnClick"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <ImageView
+                                    android:id="@+id/bg_imageViewDateOfBirth"
+                                    android:layout_width="0dp"
+                                    android:layout_height="45dp"
+                                    android:layout_marginStart="20dp"
+                                    android:layout_marginLeft="30dp"
+                                    android:layout_marginEnd="20dp"
+                                    android:layout_marginRight="30dp"
+                                    android:background="@drawable/tv_login_bg"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintHorizontal_bias="0.0"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintVertical_bias="0.0" />
+
+                                <ImageView
+                                    android:id="@+id/arrow_imageViewDateOfBirth"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    app:layout_constraintBottom_toBottomOf="@+id/bg_imageViewDateOfBirth"
+                                    app:layout_constraintEnd_toEndOf="@+id/bg_imageViewDateOfBirth"
+                                    app:layout_constraintHorizontal_bias="0.91"
+                                    app:layout_constraintStart_toStartOf="@+id/bg_imageViewDateOfBirth"
+                                    app:layout_constraintTop_toTopOf="@+id/bg_imageViewDateOfBirth"
+                                    app:layout_constraintVertical_bias="0.516"
+                                    app:srcCompat="@drawable/arrow_for_spinner" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
 
                         <TextView
-                            android:id="@+id/textView13"
+                            android:id="@+id/textViewPhoneNumber"
                             style="@style/styles_TextViewPatient"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="20dp"
-                            android:text="PHONE NUMBER" />
+                            android:layout_marginTop="20dp"
+                            android:text="@string/text_view_phone_number" />
 
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:orientation="horizontal"
                             android:weightSum="19">
+
                                 <Space
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
-                                    android:layout_weight="1"/>
+                                    android:layout_weight="1" />
 
                                 <EditText
                                     android:id="@+id/editText9"
                                     android:layout_width="0dp"
                                     android:layout_height="45dp"
-                                    android:textAlignment="gravity"
-                                    android:layout_weight="2"
-                                    android:paddingTop="8dp"
-                                    android:paddingBottom="8dp"
-                                    android:gravity="center_horizontal|center_vertical"
+                                    android:layout_weight="3"
                                     android:background="@drawable/tv_login_bg"
-                                 android:paddingLeft="3dp" />
+                                    android:paddingLeft="10dp"
+                                    android:paddingTop="8dp"
+                                    android:paddingBottom="8dp" />
 
                                 <Space
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
-                                    android:layout_weight="1"/>
+                                    android:layout_weight="1" />
 
                                 <EditText
                                     android:id="@+id/editText10"
                                     android:layout_width="0dp"
                                     android:layout_height="45dp"
-                                    android:textAlignment="gravity"
                                     android:layout_weight="3"
+                                    android:background="@drawable/tv_login_bg"
+                                    android:paddingLeft="10dp"
                                     android:paddingTop="8dp"
                                     android:paddingBottom="8dp"
-                                    android:gravity="center_horizontal|center_vertical"
-                                    android:background="@drawable/tv_login_bg"
-                                   android:paddingLeft="3dp" />
+                                    android:textAlignment="gravity" />
+
                                 <Space
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
-                                    android:layout_weight="1"/>
+                                    android:layout_weight="1" />
 
                                 <EditText
                                     android:id="@+id/editText11"
                                     android:layout_width="0dp"
                                     android:layout_height="45dp"
-                                    android:textAlignment="gravity"
-                                    android:layout_weight="10"
+                                    android:layout_weight="9"
+                                    android:background="@drawable/tv_login_bg"
+                                    android:paddingLeft="10dp"
                                     android:paddingTop="8dp"
-                                    android:paddingBottom="8dp"
-                                    android:gravity="center_horizontal|center_vertical"
-                                android:background="@drawable/tv_login_bg"
-                                android:paddingLeft="3dp" />
+                                    android:paddingBottom="8dp" />
                         </LinearLayout>
 
                         <TextView
@@ -180,122 +253,143 @@
                             style="@style/styles_TextViewPatient"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="EMAIL" />
+                            android:text="@string/text_view_email" />
 
                         <EditText
-                            android:id="@+id/editText12"
+                            android:id="@+id/editTextEmail"
                             style="@style/styles_EditTextPatient"
-                            android:layout_width="match_parent"
-
-                            android:layout_marginLeft="20dp"
-                            android:layout_marginRight="20dp"
-                            android:ems="10"
-                            android:inputType="textPersonName"
                             />
 
                         <TextView
-                            android:id="@+id/textView15"
+                            android:id="@+id/textViewPassword"
                             style="@style/styles_TextViewPatient"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="PASSWORD" />
+                            android:text="@string/text_view_password" />
 
                         <EditText
-                            android:id="@+id/editText13"
+                            android:id="@+id/editTextPassword"
                             style="@style/styles_EditTextPatient"
                             android:layout_width="match_parent"
-
                             android:layout_marginLeft="20dp"
                             android:layout_marginRight="20dp"
                             android:ems="10"
-                            android:inputType="textPersonName"
-                            />
+                            android:paddingLeft="10dp"
+                            android:password="true" />
 
                         <TextView
-                            android:id="@+id/textView18"
+                            android:id="@+id/textViewConfirmPassw"
                             style="@style/styles_TextViewPatient"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="CONFIRM PASSWORD" />
+                            android:text="@string/text_view_confirm_password" />
 
                         <EditText
-                            android:id="@+id/editText15"
+                            android:id="@+id/editTextConfirmPassword"
                             style="@style/styles_EditTextPatient"
                             android:layout_width="match_parent"
-
                             android:layout_marginLeft="20dp"
                             android:layout_marginRight="20dp"
                             android:ems="10"
-                            android:inputType="textPersonName"
-                             />
+                            android:paddingLeft="10dp"
+                            android:password="true" />
 
-                        <LinearLayout
+                        <androidx.constraintlayout.widget.ConstraintLayout
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_marginTop="10dp"
-                            android:orientation="horizontal">
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp">
 
                                 <ImageView
-                                    android:id="@+id/imageView"
+                                    android:id="@+id/imageViewLatterSubscription"
                                     android:layout_width="30dp"
                                     android:layout_height="28dp"
                                     android:layout_marginStart="20dp"
                                     android:layout_marginLeft="20dp"
                                     android:contextClickable="true"
-                                    android:onClick="checkBoxOnClick"
-                                    app:layout_constraintBottom_toTopOf="@+id/constraintLayoutBottomMenu"
-                                    app:layout_constraintEnd_toEndOf="parent"
+                                    android:onClick="newsLatterSubscriptionOnClick"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toStartOf="@+id/textViewLatter"
                                     app:layout_constraintHorizontal_bias="0.0"
                                     app:layout_constraintStart_toStartOf="parent"
-                                    app:layout_constraintTop_toBottomOf="@+id/editTextPassword"
-                                    app:layout_constraintVertical_bias="0.574"
+                                    app:layout_constraintTop_toTopOf="parent"
                                     app:srcCompat="@drawable/cb_bg_remember_me" />
 
+                                <ImageView
+                                    android:id="@+id/imageViewOrangeCube1"
+                                    android:layout_width="11dp"
+                                    android:layout_height="11dp"
+                                    android:clickable="true"
+                                    android:onClick="newsLatterSubscriptionOnClick"
+                                    android:visibility="invisible"
+                                    app:layout_constraintBottom_toBottomOf="@+id/imageViewLatterSubscription"
+                                    app:layout_constraintEnd_toEndOf="@+id/imageViewLatterSubscription"
+                                    app:layout_constraintStart_toStartOf="@+id/imageViewLatterSubscription"
+                                    app:layout_constraintTop_toTopOf="@+id/imageViewLatterSubscription"
+                                    app:srcCompat="@drawable/cb_orange" />
+
                                 <TextView
-                                    android:id="@+id/textView6"
+                                    android:id="@+id/textViewLatter"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_marginLeft="20dp"
-                                    android:layout_marginTop="10dp"
                                     android:layout_weight="1"
-                                    android:text="I accept the rulles and conditions" />
+                                    android:gravity="right"
+                                    android:text="@string/text_view_i_want_news_latter_subscription"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
 
-                        </LinearLayout>
+                        </androidx.constraintlayout.widget.ConstraintLayout>
 
-                        <LinearLayout
+                        <androidx.constraintlayout.widget.ConstraintLayout
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_marginTop="10dp"
-                            android:orientation="horizontal">
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp">
 
                                 <ImageView
-                                    android:id="@+id/imageView222"
+                                    android:id="@+id/imageViewRullesAndConditions"
                                     android:layout_width="30dp"
                                     android:layout_height="28dp"
                                     android:layout_marginStart="20dp"
                                     android:layout_marginLeft="20dp"
                                     android:contextClickable="true"
-                                    android:onClick="checkBoxOnClick"
-                                    app:layout_constraintBottom_toTopOf="@+id/constraintLayoutBottomMenu"
-                                    app:layout_constraintEnd_toEndOf="parent"
+                                    android:gravity="left"
+                                    android:onClick="acceptRullesAndConditionsOnClick"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toStartOf="@+id/textViewRulls"
                                     app:layout_constraintHorizontal_bias="0.0"
                                     app:layout_constraintStart_toStartOf="parent"
-                                    app:layout_constraintTop_toBottomOf="@+id/editTextPassword"
-                                    app:layout_constraintVertical_bias="0.574"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintVertical_bias="1.0"
                                     app:srcCompat="@drawable/cb_bg_remember_me" />
 
+                                <ImageView
+                                    android:id="@+id/imageViewOrangeCube2"
+                                    android:layout_width="11dp"
+                                    android:layout_height="11dp"
+                                    android:clickable="true"
+                                    android:onClick="acceptRullesAndConditionsOnClick"
+                                    android:visibility="invisible"
+                                    app:layout_constraintBottom_toBottomOf="@+id/imageViewRullesAndConditions"
+                                    app:layout_constraintEnd_toEndOf="@+id/imageViewRullesAndConditions"
+                                    app:layout_constraintStart_toStartOf="@+id/imageViewRullesAndConditions"
+                                    app:layout_constraintTop_toTopOf="@+id/imageViewRullesAndConditions"
+                                    app:srcCompat="@drawable/cb_orange" />
+
+
                                 <TextView
-                                    android:id="@+id/textView622"
+                                    android:id="@+id/textViewRulls"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_marginLeft="20dp"
-                                    android:layout_marginTop="10dp"
                                     android:layout_weight="1"
-                                    android:text="I want news latter subscription" />
+                                    android:gravity="right"
+                                    android:text="@string/text_view_i_accept_the_rulles_and_conditions"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
 
-
-
-                        </LinearLayout>
+                        </androidx.constraintlayout.widget.ConstraintLayout>
 
                         <ImageView
                             android:id="@+id/imageView2"

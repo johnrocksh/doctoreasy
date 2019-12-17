@@ -24,9 +24,14 @@ public class MainActivity extends Activity {
         imageViewSignUp=findViewById(R.id.imageViewSignup);
 
     }
-    public void imageViewLoginClick(View view) {
+    public void loginOnClick(View view) {
 
         Intent intent =new Intent(MainActivity.this,LogInActivity.class);
+        startActivity(intent);
+    }
+
+    public void signUpOnClick(View view) {
+        Intent intent = new Intent(MainActivity.this,SignUpActivity.class);
         startActivity(intent);
     }
 }
