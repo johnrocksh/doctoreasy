@@ -6,7 +6,6 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.Layout;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -37,7 +36,7 @@ public class LogInActivity extends AppCompatActivity {
         textViewPageName.setText(R.string.text_view_login);
         textViewForgotPassword=findViewById(R.id.textViewForgotPassword);
         textViewForgotPassword.setText(R.string.text_view_forgot_password);
-        mConstraintLayout=(ConstraintLayout) findViewById(R.id.btnMyAccaunt);
+        mConstraintLayout=(ConstraintLayout) findViewById(R.id.btnMyAccount);
         mConstraintLayout.setBackgroundResource(R.drawable.bottom_menu_pressed_bg);
 
     }
@@ -61,5 +60,11 @@ public class LogInActivity extends AppCompatActivity {
 
     public void buttonArrowNextClick(View view) {
 
+    }
+
+    public void searchBtnOnClick(View view) {
+
+        Intent intent=new Intent(LogInActivity.this,MainSearchActivity.class);
+        startActivity(intent);
     }
 }

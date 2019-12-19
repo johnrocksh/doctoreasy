@@ -25,6 +25,7 @@
             android:layout_height="wrap_content"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -77,6 +78,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
             android:text="Hello"
+            style="@style/styles_textview_header"
             android:textSize="24sp"
             android:textStyle="bold" />
 
@@ -85,6 +87,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
+            style="@style/styles_textview_header"
             android:text="Find medical services now"
             android:textSize="18sp" />
 
@@ -99,9 +102,11 @@
         <EditText
             android:id="@+id/editTextSpecialist"
             style="@style/styles_EditTextPatient"
-
             android:ems="10"
-            android:inputType="textPersonName" />
+            android:focusable="false"
+            android:inputType="textPersonName"
+            android:onClick="editTextSpecialistOnClick"
+            android:text="What are we looking for?" />
 
         <TextView
             android:id="@+id/textViewArea"
@@ -113,9 +118,11 @@
         <EditText
             android:id="@+id/editTextArea"
             style="@style/styles_EditTextPatient"
-
             android:ems="10"
-            android:inputType="textPersonName" />
+            android:focusable="false"
+            android:inputType="textPersonName"
+            android:onClick="editTextAreaOnClick"
+            android:text="Select prefered location" />
 
         <TextView
             android:id="@+id/textViewDate"
@@ -126,10 +133,12 @@
 
         <EditText
             android:id="@+id/editTextDate"
-
             style="@style/styles_EditTextPatient"
             android:ems="10"
-            android:inputType="textPersonName" />
+            android:focusable="false"
+            android:inputType="textPersonName"
+            android:onClick="editTextDateOnClick"
+            android:text="Select date" />
     </LinearLayout>
 
 

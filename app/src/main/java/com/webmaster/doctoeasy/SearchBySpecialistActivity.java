@@ -7,27 +7,26 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-public class MainSearchActivity extends AppCompatActivity {
-
+public class SearchBySpecialistActivity extends AppCompatActivity {
     ConstraintLayout mConstraintLayout;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main_search);
-
+        setContentView(R.layout.activity_search_by_specialist);
+        initActivity();
         ConstraintLayout btnLogin=findViewById(R.id.btnMyAccount);
         btnLogin.setOnClickListener(new View.OnClickListener(){
 
+
             @Override
             public void onClick(View v) {
-                Intent intent =new Intent(v.getContext(),MainActivity.class);
+                Intent intent =new Intent(v.getContext(),LogInActivity.class);
                 startActivity(intent);
             }
         });
-            initActivity();
 
     }
+
     private void initActivity() {
 
 
@@ -35,26 +34,4 @@ public class MainSearchActivity extends AppCompatActivity {
         mConstraintLayout=(ConstraintLayout) findViewById(R.id.btnSearch);
         mConstraintLayout.setBackgroundResource(R.drawable.bottom_menu_pressed_bg);
     }
-    public void backArrowClick(View view) {
-
-
-    }
-
-    public void editTextSpecialistOnClick(View view) {
-        Intent intent=new Intent(MainSearchActivity.this,SearchBySpecialistActivity.class);
-        startActivity(intent);
-    }
-
-    public void editTextAreaOnClick(View view) {
-        Intent intent=new Intent(MainSearchActivity.this,SearchByAreaActivity.class);
-        startActivity(intent);
-    }
-
-    public void editTextDateOnClick(View view) {
-        Intent intent=new Intent(MainSearchActivity.this,SearchByDateActivity.class);
-        startActivity(intent);
-    }
-
-
-
 }

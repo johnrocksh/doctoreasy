@@ -4,14 +4,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.content.Intent;
-import android.content.res.Resources;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.Gravity;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 public class SignUpActivity extends AppCompatActivity {
 
@@ -38,7 +34,7 @@ public class SignUpActivity extends AppCompatActivity {
             textViewForgotPassword.setText(R.string.text_view_login);
 
         /*press login_bottom_menu*/
-            mConstraintLayout=(ConstraintLayout) findViewById(R.id.btnMyAccaunt);
+            mConstraintLayout=(ConstraintLayout) findViewById(R.id.btnMyAccount);
             mConstraintLayout.setBackgroundResource(R.drawable.bottom_menu_pressed_bg);
     }
 
@@ -53,11 +49,15 @@ public class SignUpActivity extends AppCompatActivity {
     }
 
     public void SpecialisButtooOnClick(View view) {
+        Intent intent =new Intent(SignUpActivity.this,SignUpSpecialistActivity.class);
+        startActivity(intent);
 
     }
 
     public void ClinicButtonOnClick(View view) {
 
+        Intent intent = new Intent(SignUpActivity.this,DoctorCalendarActivity.class);
+        startActivity(intent);
 
     }
 }

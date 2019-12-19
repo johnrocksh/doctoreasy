@@ -2,19 +2,20 @@
 /* Авторизация */
 loginController
 	/*
- * Контроллер для авторизиций в приложении
- * @param Email @param password
- *
- * @return JSON_ENCODE array $returnData
- * $returnData[status] - 0 если произошла ошибка в авторизации : 1 - если успешная авторизация
- * $returnData[user_type] - тип пользовтателя 1 - пациент : 2 - cпециалист : 3 - клиника
- * $returnData[user_info] - инфо о профиле
- */
+    * Контроллер для авторизиций в приложении
+    * @param Email @param password
+    *
+    * @return JSON_ENCODE array $returnData
+    * $returnData[status] - 0 если произошла ошибка в авторизации : 1 - если успешная авторизация
+    * $returnData[user_type] - тип пользовтателя 1 - пациент : 2 - cпециалист : 3 - клиника
+    * $returnData[user_info] - инфо о профиле
+    */
 Пример
 loginController
  loginController
  email
  password
+
 pacientRegisterController
 /*
  * Контроллер для регистрации пациента в приложении

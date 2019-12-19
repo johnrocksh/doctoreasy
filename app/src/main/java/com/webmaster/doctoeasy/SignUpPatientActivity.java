@@ -32,6 +32,17 @@ public class SignUpPatientActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up_patient);
         initActivity();
+
+        ConstraintLayout btnLogin=findViewById(R.id.btnMyAccount);
+        btnLogin.setOnClickListener(new View.OnClickListener(){
+
+
+            @Override
+            public void onClick(View v) {
+                Intent intent =new Intent(v.getContext(),LogInActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     private void initActivity() {
@@ -44,7 +55,7 @@ public class SignUpPatientActivity extends AppCompatActivity {
         textViewForgotPassword.setText(R.string.text_view_login);
 
         /*init bottom*/
-        mConstraintLayout = (ConstraintLayout) findViewById(R.id.btnMyAccaunt);
+        mConstraintLayout = (ConstraintLayout) findViewById(R.id.btnMyAccount);
         mConstraintLayout.setBackgroundResource(R.drawable.bottom_menu_pressed_bg);
 
         /*init patient fields*/
