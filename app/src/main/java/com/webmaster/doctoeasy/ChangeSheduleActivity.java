@@ -9,11 +9,13 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
+import android.widget.HorizontalScrollView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 public class ChangeSheduleActivity extends AppCompatActivity {
 
+    HorizontalScrollView hsv;
 
     TextView textViewMonday;
     TextView textViewTuesday;
@@ -22,6 +24,8 @@ public class ChangeSheduleActivity extends AppCompatActivity {
     TextView textViewFriday;
     TextView textViewSaturday;
     TextView textViewSunday;
+
+
     Context mycontext;
 
     LinearLayout linarLayoutDaysOfWeek;
@@ -30,7 +34,13 @@ public class ChangeSheduleActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_change_shedule);
-        mycontext=getBaseContext();
+
+        mycontext = getBaseContext();
+
+        /*ссылка на сролл дней*/
+        hsv = (HorizontalScrollView) findViewById(R.id.horizontalScrolView_days_of_weeks);
+
+        /*дни недели*/
         textViewMonday = findViewById(R.id.textViewMonday);
         textViewTuesday = findViewById(R.id.textViewTuesday);
         textViewWednesday = findViewById(R.id.textViewWednesday);
@@ -39,95 +49,104 @@ public class ChangeSheduleActivity extends AppCompatActivity {
         textViewSaturday = findViewById(R.id.textViewSaturday);
         textViewSunday = findViewById(R.id.textViewSunday);
 
-
-
         linarLayoutDaysOfWeek = findViewById(R.id.linearLayoutDaysOfWeek);
 
 
     }
 
     /*перебераем все textView c  днями недели и убираем bold*/
-    public  void findChildren(View view) {
+    public void setStyleFontRegular(View view) {
 
-      try {
+        try {
 
-          int style = textViewMonday.getTypeface().getStyle();
+            int style = textViewMonday.getTypeface().getStyle();
 
-          if (style == Typeface.BOLD) {
-              textViewMonday.setTextAppearance(mycontext, R.style.regular);
-          }
+            if (style == Typeface.BOLD) {
+                textViewMonday.setTextAppearance(mycontext, R.style.regular);
+            }
 
-          style = textViewTuesday.getTypeface().getStyle();
-          if (style == Typeface.BOLD) {
-              textViewTuesday.setTextAppearance(mycontext, R.style.regular);
-          }
+            style = textViewTuesday.getTypeface().getStyle();
+            if (style == Typeface.BOLD) {
+                textViewTuesday.setTextAppearance(mycontext, R.style.regular);
+            }
 
-          style = textViewWednesday.getTypeface().getStyle();
-          if (style == Typeface.BOLD) {
-              textViewWednesday.setTextAppearance(mycontext, R.style.regular);
-          }
-
-
-
-          style = textViewThursday.getTypeface().getStyle();
-          if (style == Typeface.BOLD) {
-              textViewThursday.setTextAppearance(mycontext, R.style.regular);
-          }
-
-          style = textViewFriday.getTypeface().getStyle();
-          if (style == Typeface.BOLD) {
-              textViewFriday.setTextAppearance(mycontext, R.style.regular);
-          }
-
-          style = textViewSaturday.getTypeface().getStyle();
-          if (style == Typeface.BOLD) {
-              textViewSaturday.setTextAppearance(mycontext, R.style.regular);
-          }
-
-          style = textViewSunday.getTypeface().getStyle();
-          if (style == Typeface.BOLD) {
-              textViewSunday.setTextAppearance(mycontext, R.style.regular);
-          }
-      }catch (NullPointerException ex){
+            style = textViewWednesday.getTypeface().getStyle();
+            if (style == Typeface.BOLD) {
+                textViewWednesday.setTextAppearance(mycontext, R.style.regular);
+            }
 
 
-      }
+            style = textViewThursday.getTypeface().getStyle();
+            if (style == Typeface.BOLD) {
+                textViewThursday.setTextAppearance(mycontext, R.style.regular);
+            }
+
+            style = textViewFriday.getTypeface().getStyle();
+            if (style == Typeface.BOLD) {
+                textViewFriday.setTextAppearance(mycontext, R.style.regular);
+
+            }
+
+            style = textViewSaturday.getTypeface().getStyle();
+            if (style == Typeface.BOLD) {
+                textViewSaturday.setTextAppearance(mycontext, R.style.regular);
+            }
+
+            style = textViewSunday.getTypeface().getStyle();
+            if (style == Typeface.BOLD) {
+                textViewSunday.setTextAppearance(mycontext, R.style.regular);
+            }
+        } catch (NullPointerException ex) {
+
+
+        }
 
     }
 
     public void mondayOnClick(View view) {
-        findChildren(linarLayoutDaysOfWeek);
-       // textViewMonday.setTypeface(textViewMonday.getTypeface(), Typeface.BOLD);
-        textViewMonday.setTextAppearance(mycontext, R.style.boldfont);
+        /*шрифт болд*/
+        setStyleFontRegular(linarLayoutDaysOfWeek);
+        /*шрифт болд*/
+         textViewMonday.setTextAppearance(mycontext, R.style.boldfont);
+        hsv.smoothScrollBy(-100, 0);
+
     }
 
     public void tuesdayOnClick(View view) {
-        findChildren(linarLayoutDaysOfWeek);
+        setStyleFontRegular(linarLayoutDaysOfWeek);
         textViewTuesday.setTextAppearance(mycontext, R.style.boldfont);
+        hsv.smoothScrollBy(-100, 0);
     }
 
     public void wednesdayOnClick(View view) {
-        findChildren(linarLayoutDaysOfWeek);
+        setStyleFontRegular(linarLayoutDaysOfWeek);
         textViewWednesday.setTextAppearance(mycontext, R.style.boldfont);
+        hsv.smoothScrollBy(-100, 0);
     }
 
     public void thursdayOnClick(View view) {
-        findChildren(linarLayoutDaysOfWeek);
+        setStyleFontRegular(linarLayoutDaysOfWeek);
         textViewThursday.setTextAppearance(mycontext, R.style.boldfont);
+        hsv.smoothScrollBy(110, 0);
     }
 
     public void fridayOnClick(View view) {
-        findChildren(linarLayoutDaysOfWeek);
+        setStyleFontRegular(linarLayoutDaysOfWeek);
         textViewFriday.setTextAppearance(mycontext, R.style.boldfont);
+
+        hsv.smoothScrollBy(110, 0);
+        //arrowScroll(HorizontalScrollView.FOCUS_LEFT/RIGHT)
     }
 
     public void saturdayOnClick(View view) {
-        findChildren(linarLayoutDaysOfWeek);
+        setStyleFontRegular(linarLayoutDaysOfWeek);
         textViewSaturday.setTextAppearance(mycontext, R.style.boldfont);
+        hsv.smoothScrollBy(110, 0);
     }
 
     public void sundayOnClick(View view) {
-        findChildren(linarLayoutDaysOfWeek);
+        setStyleFontRegular(linarLayoutDaysOfWeek);
         textViewSunday.setTextAppearance(mycontext, R.style.boldfont);
+        hsv.smoothScrollBy(110, 0);
     }
 }

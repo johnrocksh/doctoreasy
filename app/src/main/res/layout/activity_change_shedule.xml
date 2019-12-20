@@ -18,6 +18,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <HorizontalScrollView
+            android:id="@+id/horizontalScrolView_days_of_weeks"
             android:layout_width="wrap_content"
             android:layout_height="60dp"
             android:layout_marginTop="40dp"
