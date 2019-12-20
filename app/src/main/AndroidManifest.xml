@@ -9,14 +9,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ChangeSheduleActivity"></activity>
-        <activity android:name=".DoctorMyAccountActivity" />
-        <activity android:name=".DoctorCalendarActivity">
+        <activity android:name=".ChangeSheduleActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".DoctorMyAccountActivity" />
+        <activity android:name=".DoctorCalendarActivity">
+
         </activity>
         <activity android:name=".SignUpSpecialistActivity" />
         <activity android:name=".SearchByDateActivity" />

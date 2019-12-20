@@ -24,6 +24,11 @@
 
     </style>
 
+    <style name="style_days_of_week_doctor_shedule">
+        <item name="android:textSize">12sp</item>
+        <item name="android:fontFamily">@font/muliregular</item>
+        <item name="android:textColor">#3F535F</item>
+    </style>
 
       <style name="styles_EditTextPatient">
         <item name="android:fontFamily">@font/muliregular</item>
@@ -45,5 +50,25 @@
         <item name="android:textStyle">bold</item>
         <item name="android:fontFamily">@font/muli_extrabold</item>
     </style>
+
+
+
+        <style name="boldfont">
+
+            <item name="android:fontFamily">@font/mulibold</item>
+            <item name="android:textColor">#333333</item>
+            <item name="android:textSize">14sp</item>
+
+        </style>
+
+        <style name="regular">
+
+            <item name="android:fontFamily">@font/muliregular</item>
+            <item name="android:textColor">#333333</item>
+            <item name="android:textSize">14sp</item>
+
+        </style>
+
+
 
 </resources>
