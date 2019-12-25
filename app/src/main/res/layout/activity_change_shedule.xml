@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
 
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -14,8 +13,10 @@
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
 
         <HorizontalScrollView
             android:id="@+id/horizontalScrolView_days_of_weeks"
@@ -23,6 +24,7 @@
             android:layout_height="60dp"
             android:layout_marginTop="40dp"
             android:layout_marginBottom="673dp"
+            android:animationCache="false"
             android:background="#F1F1F5"
             android:fillViewport="true"
             android:scrollbars="none"
@@ -132,6 +134,664 @@
                     android:text="ВОСКРЕСЕНЬЕ" />
             </LinearLayout>
         </HorizontalScrollView>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/horizontalScrolView_days_of_weeks"
+            app:layout_constraintVertical_bias="0.0">
+
+            <LinearLayout
+                android:id="@+id/LinearLayoutshedule"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/textViewSheduleHeader"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Shedule" />
+            </LinearLayout>
+
+            <HorizontalScrollView
+                android:id="@+id/horizontalScrollViewSheduleTime"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+                    <!-- понедельник-->
+
+                    <ScrollView
+                            android:id="@+id/scrollViewMonday"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <LinearLayout
+                                android:id="@+id/LinearLayoutMonday"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/textviewMon"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="Mon" />
+
+                                <Button
+                                    android:id="@+id/btn_mon_8am"
+                                    style="@style/styles_buttons_change_shedule_time"
+                                    android:layout_width="match_parent"
+                                    android:onClick="btn_mon_8am_OnClick"
+                                    android:text="8:00 am" />
+
+                                <Button
+                                    android:id="@+id/btn_mon_9am"
+                                    style="@style/styles_buttons_change_shedule_time"
+                                    android:background="@drawable/bg_spinner_dateofbirth"
+                                    android:text="9:00 am" />
+
+                                <Button
+                                    android:id="@+id/btn_mon_10am"
+                                    style="@style/styles_buttons_change_shedule_time"
+                                    android:text="10:00 am" />
+
+                                <Button
+                                    android:id="@+id/btn_mon_11am"
+                                    style="@style/styles_buttons_change_shedule_time"
+                                    android:layout_marginBottom="0dp"
+                                    android:paddingTop="10dp"
+                                    android:paddingBottom="10dp"
+                                    android:text="11:00 am" />
+
+                                <Button
+                                    android:id="@+id/btn_mon_12am"
+                                    style="@style/styles_buttons_change_shedule_time"
+                                    android:text="12:00 am" />
+
+                                <Button
+                                    android:id="@+id/btn_mon_1pm"
+                                    style="@style/styles_buttons_change_shedule_time"
+                                    android:text="1:00 pm" />
+
+                                <Button
+                                    android:id="@+id/btn_mon_2pm"
+                                    style="@style/styles_buttons_change_shedule_time"
+                                    android:text="2:00 pm" />
+
+                                <Button
+                                    android:id="@+id/btn_mon_3pm"
+                                    style="@style/styles_buttons_change_shedule_time"
+                                    android:text="3:00 pm" />
+
+                                <Button
+                                    android:id="@+id/btn_mon_4pm"
+                                    style="@style/styles_buttons_change_shedule_time"
+                                    android:text="4:00 pm" />
+
+                                <Button
+                                    android:id="@+id/btn_mon_5pm"
+                                    style="@style/styles_buttons_change_shedule_time"
+                                    android:text="5:00 pm" />
+
+                                <Button
+                                    android:id="@+id/btn_mon_6pm"
+                                    style="@style/styles_buttons_change_shedule_time"
+                                    android:text="6:00 pm" />
+
+                                <Button
+                                    android:id="@+id/btn_mon_7pm"
+                                    style="@style/styles_buttons_change_shedule_time"
+                                    android:text="7:00 pm" />
+
+                                <Button
+                                    android:id="@+id/btn_mon_8pm"
+                                    style="@style/styles_buttons_change_shedule_time"
+                                    android:text="8:00 pm" />
+                            </LinearLayout>
+
+                        </ScrollView>
+                    <!--вторник-->
+
+                    <ScrollView
+                        android:id="@+id/scrollViewTuesday"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:id="@+id/LinearLayoutTuesday"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/textViewTues"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Tues" />
+
+                            <Button
+                                android:id="@+id/btn_tues_8am"
+                                style="@style/styles_buttons_change_shedule_time"
+                                android:text="8:00 am" />
+
+                            <Button
+                                android:id="@+id/btn_tues_9am"
+                                style="@style/styles_buttons_change_shedule_time"
+                                android:text="9:00 am" />
+
+                            <Button
+                                android:id="@+id/btn_tues_10am"
+                                style="@style/styles_buttons_change_shedule_time"
+                                android:text="10:00 am" />
+
+                            <Button
+                                android:id="@+id/btn_tues_11am"
+                                style="@style/styles_buttons_change_shedule_time"
+                                android:text="11:00 am" />
+
+                            <Button
+                                android:id="@+id/btn_tues_12am"
+                                style="@style/styles_buttons_change_shedule_time"
+                                android:text="12:00 am" />
+
+                            <Button
+                                android:id="@+id/btn_tues_1pm"
+                                style="@style/styles_buttons_change_shedule_time"
+                                android:text="1:00 pm" />
+
+                            <Button
+                                android:id="@+id/btn_tues_2pm"
+                                style="@style/styles_buttons_change_shedule_time"
+                                android:text="2:00 pm" />
+
+                            <Button
+                                android:id="@+id/btn_tues_3pm"
+                                style="@style/styles_buttons_change_shedule_time"
+                                android:text="3:00 pm" />
+
+                            <Button
+                                android:id="@+id/btn_tues_4pm"
+                                style="@style/styles_buttons_change_shedule_time"
+                                android:text="4:00 pm" />
+
+                            <Button
+                                android:id="@+id/btn_tues_5pm"
+                                style="@style/styles_buttons_change_shedule_time"
+                                android:text="5:00 pm" />
+
+                            <Button
+                                android:id="@+id/btn_tues_6pm"
+                                style="@style/styles_buttons_change_shedule_time"
+                                android:text="6:00 pm" />
+
+                            <Button
+                                android:id="@+id/btn_tues_7pm"
+                                style="@style/styles_buttons_change_shedule_time"
+                                android:text="7:00 pm" />
+
+                            <Button
+                                android:id="@+id/btn_tues_8pm"
+                                style="@style/styles_buttons_change_shedule_time"
+                                android:text="8:00 pm" />
+                        </LinearLayout>
+                    </ScrollView>
+                    <!--среда -->
+
+                    <ScrollView
+                        android:id="@+id/scrollViewWednesday"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:id="@+id/LinearLayoutWednesday"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/textViewWed"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="wed" />
+
+                            <Button
+                                android:id="@+id/btn_wed_8am"
+                                style="@style/styles_buttons_change_shedule_time"
+                                android:text="8:00 am" />
+
+                            <Button
+                                android:id="@+id/btn_wed_9am"
+                                style="@style/styles_buttons_change_shedule_time"
+                                android:text="9:00 am" />
+
+                            <Button
+                                android:id="@+id/btn_wed_10am"
+                                style="@style/styles_buttons_change_shedule_time"
+                                android:text="10:00 am" />
+
+                            <Button
+                                android:id="@+id/btn_wed_11am"
+                                style="@style/styles_buttons_change_shedule_time"
+                                android:text="11:00 am" />
+
+                            <Button
+                                android:id="@+id/btn_wed_12am"
+                                style="@style/styles_buttons_change_shedule_time"
+                                android:text="12:00 am" />
+
+                            <Button
+                                android:id="@+id/btn_wed_1pm"
+                                style="@style/styles_buttons_change_shedule_time"
+                                android:text="1:00 pm" />
+
+                            <Button
+                                android:id="@+id/btn_wed_2pm"
+                                style="@style/styles_buttons_change_shedule_time"
+                                android:text="2:00 pm" />
+
+                            <Button
+                                android:id="@+id/btn_wed_3pm"
+                                style="@style/styles_buttons_change_shedule_time"
+                                android:text="3:00 pm" />
+
+                            <Button
+                                android:id="@+id/btn_wed_4pm"
+                                style="@style/styles_buttons_change_shedule_time"
+                                android:text="4:00 pm" />
+
+                            <Button
+                                android:id="@+id/btn_wed_5pm"
+                                style="@style/styles_buttons_change_shedule_time"
+                                android:text="5:00 pm" />
+
+                            <Button
+                                android:id="@+id/btn_wed_6pm"
+                                style="@style/styles_buttons_change_shedule_time"
+                                android:text="6:00 pm" />
+
+                            <Button
+                                android:id="@+id/btn_wed_7pm"
+                                style="@style/styles_buttons_change_shedule_time"
+                                android:text="7:00 pm" />
+
+                            <Button
+                                android:id="@+id/btn_wed_8pm"
+                                style="@style/styles_buttons_change_shedule_time"
+                                android:text="8:00 pm" />
+                        </LinearLayout>
+                    </ScrollView>
+                    <!--четверг -->
+                    <ScrollView
+                        android:id="@+id/scrollViewThursday"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:id="@+id/LinearLayoutThursday"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/textViewThur"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Thur" />
+
+                            <Button
+                                android:id="@+id/btn_Thur_8am"
+                                style="@style/styles_buttons_change_shedule_time"
+                                android:text="8:00 am" />
+
+                            <Button
+                                android:id="@+id/btn_Thur_9am"
+                                style="@style/styles_buttons_change_shedule_time"
+                                android:text="9:00 am" />
+
+                            <Button
+                                android:id="@+id/btn_Thur_10am"
+                                style="@style/styles_buttons_change_shedule_time"
+                                android:text="10:00 am" />
+
+                            <Button
+                                android:id="@+id/btn_Thur_11am"
+                                style="@style/styles_buttons_change_shedule_time"
+                                android:text="11:00 am" />
+
+                            <Button
+                                android:id="@+id/btn_Thur_12am"
+                                style="@style/styles_buttons_change_shedule_time"
+                                android:text="12:00 am" />
+
+                            <Button
+                                android:id="@+id/btn_Thur_1pm"
+                                style="@style/styles_buttons_change_shedule_time"
+                                android:text="1:00 pm" />
+
+                            <Button
+                                android:id="@+id/btn_Thur_2pm"
+                                style="@style/styles_buttons_change_shedule_time"
+                                android:text="2:00 pm" />
+
+                            <Button
+                                android:id="@+id/btn_Thur_3pm"
+                                style="@style/styles_buttons_change_shedule_time"
+                                android:text="3:00 pm" />
+
+                            <Button
+                                android:id="@+id/btn_Thur_4pm"
+                                style="@style/styles_buttons_change_shedule_time"
+                                android:text="4:00 pm" />
+
+                            <Button
+                                android:id="@+id/btn_Thur_5pm"
+                                style="@style/styles_buttons_change_shedule_time"
+                                android:text="5:00 pm" />
+
+                            <Button
+                                android:id="@+id/btn_Thur_6pm"
+                                style="@style/styles_buttons_change_shedule_time"
+                                android:text="6:00 pm" />
+
+                            <Button
+                                android:id="@+id/btn_Thur_7pm"
+                                style="@style/styles_buttons_change_shedule_time"
+                                android:text="7:00 pm" />
+
+                            <Button
+                                android:id="@+id/btn_Thur_8pm"
+                                style="@style/styles_buttons_change_shedule_time"
+                                android:text="8:00 pm" />
+                        </LinearLayout>
+                    </ScrollView>
+                    <!--пятница-->
+                    <ScrollView
+                        android:id="@+id/scrollViewFriday"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:id="@+id/LinearLayoutFriday"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/textView9"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Fri" />
+
+                            <Button
+                                android:id="@+id/btn_fri_8am"
+                                style="@style/styles_buttons_change_shedule_time"
+                                android:text="8:00 am" />
+
+                            <Button
+                                android:id="@+id/btn_fri_9am"
+                                style="@style/styles_buttons_change_shedule_time"
+                                android:text="9:00 am" />
+
+                            <Button
+                                android:id="@+id/btn_fri_10am"
+                                style="@style/styles_buttons_change_shedule_time"
+                                android:text="10:00 am" />
+
+                            <Button
+                                android:id="@+id/btn_fri_11am"
+                                style="@style/styles_buttons_change_shedule_time"
+                                android:text="11:00 am" />
+
+                            <Button
+                                android:id="@+id/btn_fri_12am"
+                                style="@style/styles_buttons_change_shedule_time"
+                                android:text="12:00 am" />
+
+                            <Button
+                                android:id="@+id/btn_fri_1pm"
+                                style="@style/styles_buttons_change_shedule_time"
+                                android:text="1:00 pm" />
+
+                            <Button
+                                android:id="@+id/btn_fri_2pm"
+                                style="@style/styles_buttons_change_shedule_time"
+                                android:text="2:00 pm" />
+
+                            <Button
+                                android:id="@+id/btn_fri_3pm"
+                                style="@style/styles_buttons_change_shedule_time"
+                                android:text="3:00 pm" />
+
+                            <Button
+                                android:id="@+id/btn_fri_4pm"
+                                style="@style/styles_buttons_change_shedule_time"
+                                android:text="4:00 pm" />
+
+                            <Button
+                                android:id="@+id/btn_fri_5pm"
+                                style="@style/styles_buttons_change_shedule_time"
+                                android:text="5:00 pm" />
+
+                            <Button
+                                android:id="@+id/btn_fri_6pm"
+                                style="@style/styles_buttons_change_shedule_time"
+                                android:text="6:00 pm" />
+
+                            <Button
+                                android:id="@+id/btn_fri_7pm"
+                                style="@style/styles_buttons_change_shedule_time"
+                                android:text="7:00 pm" />
+
+                            <Button
+                                android:id="@+id/btn_fri_8pm"
+                                style="@style/styles_buttons_change_shedule_time"
+                                android:text="8:00 pm" />
+                        </LinearLayout>
+                    </ScrollView>
+<!--                    суббота-->
+                    <ScrollView
+                    android:id="@+id/scrollViewSaturday"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:id="@+id/LinearLayoutSaturday"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textViewSat"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="sat" />
+
+                        <Button
+                            android:id="@+id/btn_sat_8am"
+                            style="@style/styles_buttons_change_shedule_time"
+                            android:text="8:00 am" />
+
+                        <Button
+                            android:id="@+id/btn_sat_9am"
+                            style="@style/styles_buttons_change_shedule_time"
+                            android:text="9:00 am" />
+
+                        <Button
+                            android:id="@+id/btn_sat_10am"
+                            style="@style/styles_buttons_change_shedule_time"
+                            android:text="10:00 am" />
+
+                        <Button
+                            android:id="@+id/btn_sat_11am"
+                            style="@style/styles_buttons_change_shedule_time"
+                            android:text="11:00 am" />
+
+                        <Button
+                            android:id="@+id/btn_sat_12am"
+                            style="@style/styles_buttons_change_shedule_time"
+                            android:text="12:00 am" />
+
+                        <Button
+                            android:id="@+id/btn_sat_1pm"
+                            style="@style/styles_buttons_change_shedule_time"
+                            android:text="1:00 pm" />
+
+                        <Button
+                            android:id="@+id/btn_sat_2pm"
+                            style="@style/styles_buttons_change_shedule_time"
+                            android:text="2:00 pm" />
+
+                        <Button
+                            android:id="@+id/btn_sat_3pm"
+                            style="@style/styles_buttons_change_shedule_time"
+                            android:text="3:00 pm" />
+
+                        <Button
+                            android:id="@+id/btn_sat_4pm"
+                            style="@style/styles_buttons_change_shedule_time"
+                            android:text="4:00 pm" />
+
+                        <Button
+                            android:id="@+id/btn_sat_5pm"
+                            style="@style/styles_buttons_change_shedule_time"
+                            android:text="5:00 pm" />
+
+                        <Button
+                            android:id="@+id/btn_sat_6pm"
+                            style="@style/styles_buttons_change_shedule_time"
+                            android:text="6:00 pm" />
+
+                        <Button
+                            android:id="@+id/btn_sat_7pm"
+                            style="@style/styles_buttons_change_shedule_time"
+                            android:text="7:00 pm" />
+
+                        <Button
+                            android:id="@+id/btn_sat_8pm"
+                            style="@style/styles_buttons_change_shedule_time"
+                            android:text="8:00 pm" />
+                    </LinearLayout>
+                </ScrollView>
+<!--воскресенье-->
+                    <ScrollView
+                        android:id="@+id/scrollViewSunday"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:id="@+id/LinearLayoutSunday"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/textViewSun"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="sun" />
+
+                            <Button
+                                android:id="@+id/btn_sun_8am"
+                                style="@style/styles_buttons_change_shedule_time"
+                                android:text="8:00 am" />
+
+                            <Button
+                                android:id="@+id/btn_sun_9am"
+                                style="@style/styles_buttons_change_shedule_time"
+                                android:text="9:00 am" />
+
+                            <Button
+                                android:id="@+id/btn_sun_10am"
+                                style="@style/styles_buttons_change_shedule_time"
+                                android:text="10:00 am" />
+
+                            <Button
+                                android:id="@+id/btn_sun_11am"
+                                style="@style/styles_buttons_change_shedule_time"
+                                android:text="11:00 am" />
+
+                            <Button
+                                android:id="@+id/btn_sun_12am"
+                                style="@style/styles_buttons_change_shedule_time"
+                                android:text="12:00 am" />
+
+                            <Button
+                                android:id="@+id/btn_sun_1pm"
+                                style="@style/styles_buttons_change_shedule_time"
+                                android:text="1:00 pm" />
+
+                            <Button
+                                android:id="@+id/btn_sun_2pm"
+                                style="@style/styles_buttons_change_shedule_time"
+                                android:text="2:00 pm" />
+
+                            <Button
+                                android:id="@+id/btn_sun_3pm"
+                                style="@style/styles_buttons_change_shedule_time"
+                                android:text="3:00 pm" />
+
+                            <Button
+                                android:id="@+id/btn_sun_4pm"
+                                style="@style/styles_buttons_change_shedule_time"
+                                android:text="4:00 pm" />
+
+                            <Button
+                                android:id="@+id/btn_sun_5pm"
+                                style="@style/styles_buttons_change_shedule_time"
+                                android:text="5:00 pm" />
+
+                            <Button
+                                android:id="@+id/btn_sun_6pm"
+                                style="@style/styles_buttons_change_shedule_time"
+                                android:text="6:00 pm" />
+
+                            <Button
+                                android:id="@+id/btn_sun_7pm"
+                                style="@style/styles_buttons_change_shedule_time"
+                                android:text="7:00 pm" />
+
+                            <Button
+                                android:id="@+id/btn_sun_8pm"
+                                style="@style/styles_buttons_change_shedule_time"
+                                android:text="8:00 pm" />
+                        </LinearLayout>
+                    </ScrollView>
+
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

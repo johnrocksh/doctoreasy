@@ -52,6 +52,23 @@
     </style>
 
 
+    <style name="styles_buttons_change_shedule_time">
+        <item name="android:layout_width">500dp</item>
+        <item name="android:layout_height">100dp</item>>
+        <item name="android:gravity">left|center_vertical</item>
+        <item name="android:layout_gravity">left</item>
+        <item name="android:background">@drawable/bg_spinner_dateofbirth</item>
+
+
+        <item name="android:paddingLeft">10dp</item>
+    </style>
+
+<!--    <style name="styles_buttons_shedule_time_pressed">-->
+<!--        <item name="android:layout_width">500dp</item>-->
+<!--        <item name="android:layout_height">93dp</item>>-->
+<!--        <item name="android:gravity">left|center_vertical</item>-->
+<!--        <item name="android:background">#00BCD4</item>-->
+<!--    </style>-->
 
         <style name="boldfont">
 
